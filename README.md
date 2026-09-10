@@ -70,7 +70,6 @@ Visit `http://localhost:5173` to see it in action.
 ## 📄 License
 
 MIT
-
 ```
 
 
