@@ -3,7 +3,8 @@
 
 > *"Will it run, or will it melt?"*
 
-A lightweight web app that instantly tells you which PC games your machine can crush—and which ones will turn it into a space heater—with zero downloads, zero terminal commands, and zero friction.
+A lightweight web app that instantly tells you which PC games your machine can crush—and which ones will
+turn it into a space heater—with zero downloads, zero terminal commands,and zero friction.
 
 ---
 
