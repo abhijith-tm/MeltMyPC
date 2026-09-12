@@ -1,5 +1,4 @@
 import React from "react"
-import logoImg from "../assets/logo.png"
 import { Badge } from "./ui/Badge"
 import { Flame, ShieldCheck, Zap } from "lucide-react"
 
@@ -8,21 +7,21 @@ export function Navbar({ onOpenManual }) {
     <header className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        {/* Left: Logo brand from user wireframe */}
-        <div className="flex items-center gap-3.5 group cursor-pointer">
-          <div className="relative">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-orange-500 to-red-600 opacity-40 blur group-hover:opacity-75 transition duration-300" />
-            <img
-              src={logoImg}
-              alt="MeltMyPC Flame Logo"
-              className="relative h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-105 duration-200"
-            />
+        {/* Left: Brand logo icon emblem & typography */}
+        <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative p-2.5 rounded-xl border border-orange-500/30 bg-gradient-to-br from-orange-500/20 to-red-600/10 shadow-md shadow-orange-500/20 group-hover:border-orange-400/60 transition-all duration-300">
+            <Flame className="w-5 h-5 text-orange-400 fill-orange-400 group-hover:scale-110 transition-transform duration-200" />
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 uppercase drop-shadow-sm font-mono">
-              MeltMyPC
-            </span>
-            <span className="text-[10px] tracking-widest text-zinc-400 uppercase font-semibold -mt-0.5">
+            <div className="flex items-center gap-1">
+              <span className="font-extrabold text-xl tracking-tight text-zinc-100 uppercase font-mono">
+                MeltMy
+              </span>
+              <span className="font-extrabold text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 uppercase font-mono">
+                PC
+              </span>
+            </div>
+            <span className="text-[10px] tracking-widest text-zinc-500 uppercase font-mono font-medium -mt-0.5">
               Will it run, or will it melt?
             </span>
           </div>

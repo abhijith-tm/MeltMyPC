@@ -1,38 +1,53 @@
 import React from "react"
 import { Button } from "./ui/Button"
 import { Badge } from "./ui/Badge"
-import logoImg from "../assets/logo.png"
 import { Zap, SlidersHorizontal, Shield, Cpu, Flame } from "lucide-react"
 
 export function Hero({ onScan, onSelectManual, isScanning }) {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 flex flex-col items-center justify-center text-center px-4">
+    <section className="relative overflow-hidden pt-12 pb-20 md:pt-16 md:pb-24 flex flex-col items-center justify-center text-center px-4">
       
       {/* Background ambient flame glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gradient-to-tr from-orange-600/15 via-amber-500/10 to-red-600/15 blur-[120px] pointer-events-none -z-10 rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[400px] bg-gradient-to-tr from-orange-600/20 via-amber-500/15 to-red-600/20 blur-[130px] pointer-events-none -z-10 rounded-full" />
 
-      {/* Brand Artwork Centerpiece */}
-      <div className="mb-6 relative group">
-        <div className="absolute -inset-4 rounded-full bg-gradient-to-t from-red-500/30 to-amber-500/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
-        <img
-          src={logoImg}
-          alt="MeltMyPC Flame Logo"
-          className="relative w-36 sm:w-44 md:w-52 h-auto mx-auto drop-shadow-[0_10px_20px_rgba(239,68,68,0.35)] transition-transform duration-300 hover:scale-105"
-        />
+      {/* Top Status Pill */}
+      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-orange-500/30 bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-red-500/10 mb-8 backdrop-blur-md shadow-sm shadow-orange-500/10">
+        <Flame className="w-3.5 h-3.5 text-amber-400 fill-amber-400 animate-pulse" />
+        <span className="text-[11px] font-mono font-bold tracking-widest text-amber-300 uppercase">
+          Zero-Download Game Benchmark
+        </span>
       </div>
 
-      {/* Primary Headline & Sub-copy */}
-      <div className="max-w-3xl mx-auto mb-10 space-y-3">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-100 uppercase">
-          Will it run, or will it{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500">
-            melt?
+      {/* Stylized MeltMyPC Heading */}
+      <div className="relative mb-6 max-w-4xl mx-auto">
+        <div className="absolute -inset-x-10 -inset-y-6 bg-gradient-to-r from-amber-500/20 via-orange-600/25 to-red-600/20 blur-2xl opacity-60 -z-10 rounded-full pointer-events-none" />
+        
+        <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight uppercase select-none leading-none">
+          <span className="text-zinc-100 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
+            MELT
+          </span>
+          <span className="text-zinc-500 font-bold mx-1.5 sm:mx-2">
+            MY
+          </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 drop-shadow-[0_4px_30px_rgba(249,115,22,0.5)]">
+            PC
           </span>
         </h1>
-        <p className="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto font-normal">
-          Find out what your PC can actually play in 1 click. Zero installers, zero software downloads, zero security warnings.
-        </p>
+
+        {/* Dynamic Flame Divider & Tagline */}
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-5">
+          <div className="h-[2px] w-10 sm:w-20 bg-gradient-to-r from-transparent to-amber-500" />
+          <span className="text-xs sm:text-sm tracking-[0.25em] font-mono uppercase font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-400">
+            Will it run, or will it melt?
+          </span>
+          <div className="h-[2px] w-10 sm:w-20 bg-gradient-to-l from-transparent to-amber-500" />
+        </div>
       </div>
+
+      {/* Sub-copy */}
+      <p className="text-zinc-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-normal leading-relaxed mb-10">
+        Find out what your PC can actually play in 1 click. Instant WebGL scan with zero installers, zero downloads, and zero risk.
+      </p>
 
       {/* Wireframe Core Actions: Centered Button Stack */}
       <div className="flex flex-col items-center gap-5 w-full max-w-md">
